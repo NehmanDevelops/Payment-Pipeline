@@ -5,3 +5,4 @@ export { ControlPanel } from './ControlPanel';
 export { RetryQueue } from './RetryQueue';
 export { LiveChart } from './LiveChart';
 export { FraudAnalytics } from './FraudAnalytics';
+export { StageDetails } from './StageDetails';
