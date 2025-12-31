@@ -11,7 +11,12 @@ import {
   FraudAnalytics,
   KeyboardShortcuts,
   StageDetails,
-  TransactionTypeBreakdown
+  TransactionTypeBreakdown,
+  GlobalStats,
+  ComparisonChart,
+  MilestoneTracker,
+  ActivityFeed,
+  SettingsPanel
 } from '@/components';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
@@ -31,6 +36,7 @@ function Header() {
           </div>
           
           <div className="flex items-center gap-4">
+            <SettingsPanel />
             <a 
               href="https://github.com/NehmanDevelops/Payment-Pipeline"
               target="_blank"
@@ -135,8 +141,18 @@ export default function Home() {
             <TransactionTypeBreakdown />
           </div>
           
-          {/* Retry Queue */}
-          <RetryQueue />
+          {/* Sidebar content */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <GlobalStats />
+            <ComparisonChart />
+            <ActivityFeed />
+          </div>
+          
+          {/* Milestone and Retry */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <MilestoneTracker />
+            <RetryQueue />
+          </div>
           
           {/* Transaction List */}
           <TransactionList />
