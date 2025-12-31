@@ -25,3 +25,5 @@ export { ActivityFeed } from './ActivityFeed';
 export { AIInsights } from './AIInsights';
 export { SystemLogs } from './SystemLogs';
 export { GeographicView } from './GeographicView';
+export { InstructionsModal } from './InstructionsModal';
+export { DemoMode } from './DemoMode';

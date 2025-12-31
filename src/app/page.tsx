@@ -19,7 +19,9 @@ import {
   SettingsPanel,
   AIInsights,
   SystemLogs,
-  GeographicView
+  GeographicView,
+  InstructionsModal,
+  DemoMode
 } from '@/components';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
@@ -39,6 +41,8 @@ function Header() {
           </div>
           
           <div className="flex items-center gap-4">
+            <DemoMode />
+            <InstructionsModal />
             <SettingsPanel />
             <a 
               href="https://github.com/NehmanDevelops/Payment-Pipeline"
@@ -92,7 +96,7 @@ function Footer() {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com/in/nehmankarimi"
+              href="https://linkedin.com/in/nehmanrahimi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
@@ -114,7 +118,7 @@ export default function Home() {
         
         <main className="max-w-7xl mx-auto px-6 py-8 space-y-6">
           {/* Hero Section */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-8" data-tour="hero">
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
               Payment Settlement Pipeline
             </h2>
@@ -125,18 +129,26 @@ export default function Home() {
           </div>
 
           {/* Metrics */}
-          <MetricsDashboard />
+          <div data-tour="metrics">
+            <MetricsDashboard />
+          </div>
           
           {/* Controls */}
-          <ControlPanel />
+          <div data-tour="controls">
+            <ControlPanel />
+          </div>
           
           {/* Pipeline Visualization */}
-          <PipelineVisualizer />
+          <div data-tour="pipeline">
+            <PipelineVisualizer />
+          </div>
           
           {/* Analytics Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6" data-tour="charts">
             <LiveChart />
-            <FraudAnalytics />
+            <div data-tour="fraud">
+              <FraudAnalytics />
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -153,21 +165,31 @@ export default function Home() {
           
           {/* AI and Geographic */}
           <div className="grid md:grid-cols-2 gap-6">
-            <AIInsights />
-            <GeographicView />
+            <div data-tour="ai-insights">
+              <AIInsights />
+            </div>
+            <div data-tour="geographic">
+              <GeographicView />
+            </div>
           </div>
           
           {/* Milestone and Retry */}
           <div className="grid md:grid-cols-2 gap-6">
-            <MilestoneTracker />
+            <div data-tour="milestones">
+              <MilestoneTracker />
+            </div>
             <RetryQueue />
           </div>
           
           {/* System Logs */}
-          <SystemLogs />
+          <div data-tour="logs">
+            <SystemLogs />
+          </div>
           
           {/* Transaction List */}
-          <TransactionList />
+          <div data-tour="transactions">
+            <TransactionList />
+          </div>
         </main>
         
         <Footer />

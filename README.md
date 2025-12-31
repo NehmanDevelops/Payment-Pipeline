@@ -31,4 +31,4 @@ Next.js 14 • TypeScript • Tailwind CSS • Framer Motion
 
 ## Author
 
-**Nehman Karimi** — [Portfolio](https://nehmans-portfolio.vercel.app) • [GitHub](https://github.com/NehmanDevelops)
+**Nehman Rahimi** — [Portfolio](https://nehmans-portfolio.vercel.app) • [GitHub](https://github.com/NehmanDevelops)

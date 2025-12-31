@@ -175,8 +175,8 @@ export function TransactionList() {
               No transactions to display
             </div>
           ) : (
-            filteredTransactions.map((tx) => (
-              <TransactionCard key={tx.id} transaction={tx} />
+            filteredTransactions.map((tx, index) => (
+              <TransactionCard key={`${tx.id}-${index}`} transaction={tx} />
             ))
           )}
         </AnimatePresence>
