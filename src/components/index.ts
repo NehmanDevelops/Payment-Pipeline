@@ -8,3 +8,6 @@ export { FraudAnalytics } from './FraudAnalytics';
 export { StageDetails } from './StageDetails';
 export { TransactionTypeBreakdown } from './TransactionTypeBreakdown';
 export { NotificationCenter } from './NotificationCenter';
+export { TransactionFilters } from './TransactionFilters';
+export { KeyboardShortcuts } from './KeyboardShortcuts';
+export { SessionStats } from './SessionStats';
