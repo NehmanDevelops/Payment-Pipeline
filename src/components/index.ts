@@ -6,3 +6,5 @@ export { RetryQueue } from './RetryQueue';
 export { LiveChart } from './LiveChart';
 export { FraudAnalytics } from './FraudAnalytics';
 export { StageDetails } from './StageDetails';
+export { TransactionTypeBreakdown } from './TransactionTypeBreakdown';
+export { NotificationCenter } from './NotificationCenter';
