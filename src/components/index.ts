@@ -22,3 +22,6 @@ export { ExportPanel } from './ExportPanel';
 export { SettingsPanel } from './SettingsPanel';
 export { MilestoneTracker } from './MilestoneTracker';
 export { ActivityFeed } from './ActivityFeed';
+export { AIInsights } from './AIInsights';
+export { SystemLogs } from './SystemLogs';
+export { GeographicView } from './GeographicView';

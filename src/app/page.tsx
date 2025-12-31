@@ -16,7 +16,10 @@ import {
   ComparisonChart,
   MilestoneTracker,
   ActivityFeed,
-  SettingsPanel
+  SettingsPanel,
+  AIInsights,
+  SystemLogs,
+  GeographicView
 } from '@/components';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
@@ -148,11 +151,20 @@ export default function Home() {
             <ActivityFeed />
           </div>
           
+          {/* AI and Geographic */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <AIInsights />
+            <GeographicView />
+          </div>
+          
           {/* Milestone and Retry */}
           <div className="grid md:grid-cols-2 gap-6">
             <MilestoneTracker />
             <RetryQueue />
           </div>
+          
+          {/* System Logs */}
+          <SystemLogs />
           
           {/* Transaction List */}
           <TransactionList />
