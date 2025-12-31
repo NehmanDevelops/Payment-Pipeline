@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💳 Payment Pipeline - Real-time Settlement Visualizer
 
-## Getting Started
+A visually stunning, real-time visualization of how payments flow through a banking system — from initiation through fraud detection, balance verification, and final settlement.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-purple?style=flat-square&logo=framer)
+
+## 🎯 What This Demonstrates
+
+This project showcases understanding of **enterprise payment infrastructure** concepts that banks like RBC use:
+
+- **Transaction Pipeline Architecture** - Multi-stage processing with state management
+- **Real-time Data Flow** - Animated visualization of concurrent transactions
+- **Fraud Detection Integration** - ML-based risk scoring simulation
+- **Error Handling & Retry Logic** - Failed transaction queue with retry mechanisms
+- **Audit Trail Logging** - Complete transaction history with latency metrics
+- **Settlement Processing** - Final clearing stage visualization
+
+## ✨ Features
+
+### 🔄 Live Transaction Pipeline
+Watch transactions flow through 5 stages in real-time:
+1. **Initiated** → Transaction received
+2. **Fraud Check** → ML risk scoring (failures if score > 75)
+3. **Balance Verify** → Account validation
+4. **Processing** → Transaction execution
+5. **Settlement** → Final clearing
+
+### 📊 Real-time Metrics Dashboard
+- Total transactions processed
+- Success/failure rates
+- Average processing latency
+- Retry queue depth
+
+### ⚡ Interactive Controls
+- **Play/Pause** - Stop and resume the pipeline
+- **Speed Control** - 0.5x to 4x simulation speed
+- **Manual Transaction** - Add transactions on demand
+- **Retry Failed** - Re-process failed transactions
+
+### 🔍 Expandable Audit Trail
+Click any transaction to see:
+- Stage-by-stage processing history
+- Latency at each step
+- Failure reasons (if applicable)
+- Risk score breakdown
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/NehmanDevelops/Payment-Pipeline.git
+
+# Navigate to project
+cd Payment-Pipeline
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx          # Main dashboard
+│   └── layout.tsx        # Root layout
+├── components/
+│   ├── PipelineVisualizer.tsx   # Animated pipeline stages
+│   ├── TransactionList.tsx      # Transaction cards with audit trail
+│   ├── MetricsDashboard.tsx     # Real-time metrics
+│   ├── ControlPanel.tsx         # Play/pause, speed controls
+│   └── RetryQueue.tsx           # Failed transaction queue
+├── context/
+│   └── PipelineContext.tsx      # State management & transaction processing
+├── lib/
+│   └── transaction-generator.ts # Realistic transaction data generation
+└── types/
+    └── transaction.ts           # TypeScript interfaces
+```
 
-## Learn More
+## 🎨 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 14** | React framework with App Router |
+| **TypeScript** | Type-safe development |
+| **Tailwind CSS** | Utility-first styling |
+| **Framer Motion** | Smooth animations |
+| **Lucide React** | Beautiful icons |
+| **React Context** | State management |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Key Concepts Demonstrated
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### For Banking/Fintech Recruiters:
+- ✅ Understanding of payment processing pipelines
+- ✅ Real-time state management patterns
+- ✅ Error handling and retry mechanisms
+- ✅ Transaction audit trail implementation
+- ✅ Risk scoring integration concepts
+- ✅ Clean, production-ready code architecture
 
-## Deploy on Vercel
+### Technical Skills:
+- Modern React patterns (hooks, context)
+- TypeScript with strict typing
+- CSS animations with Framer Motion
+- Responsive design
+- Component composition
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Future Enhancements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] WebSocket integration for true real-time updates
+- [ ] Database persistence with Prisma
+- [ ] Authentication with JWT
+- [ ] API rate limiting simulation
+- [ ] More detailed ML fraud scoring
+- [ ] Transaction search and filtering
+
+## 👨‍💻 Author
+
+**Nehman Karimi**
+
+- Portfolio: [nehmans-portfolio.vercel.app](https://nehmans-portfolio.vercel.app)
+- GitHub: [@NehmanDevelops](https://github.com/NehmanDevelops)
+- LinkedIn: [/in/nehmankarimi](https://linkedin.com/in/nehmankarimi)
+
+---
+
+Built with ❤️ to demonstrate enterprise payment infrastructure concepts.
