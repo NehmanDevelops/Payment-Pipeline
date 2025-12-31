@@ -11,3 +11,8 @@ export { NotificationCenter } from './NotificationCenter';
 export { TransactionFilters } from './TransactionFilters';
 export { KeyboardShortcuts } from './KeyboardShortcuts';
 export { SessionStats } from './SessionStats';
+export { ThemeToggle } from './ThemeToggle';
+export { TransactionModal } from './TransactionModal';
+export { ExportData } from './ExportData';
+export { StreakCounter } from './StreakCounter';
+export { PipelineHealth } from './PipelineHealth';

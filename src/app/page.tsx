@@ -8,7 +8,10 @@ import {
   ControlPanel,
   RetryQueue,
   LiveChart,
-  FraudAnalytics
+  FraudAnalytics,
+  KeyboardShortcuts,
+  StageDetails,
+  TransactionTypeBreakdown
 } from '@/components';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
@@ -107,8 +110,8 @@ export default function Home() {
               Payment Settlement Pipeline
             </h2>
             <p className="text-gray-400 mt-2 max-w-2xl mx-auto">
-              A real-time visualization of how payments flow through a banking system — from initiation to final settlement.
-              Watch transactions move through fraud detection, balance verification, and clearing stages.
+              Real-time visualization of how payments flow through a banking system.
+              Watch transactions move through fraud detection, balance verification, and clearing.
             </p>
           </div>
 
@@ -121,10 +124,15 @@ export default function Home() {
           {/* Pipeline Visualization */}
           <PipelineVisualizer />
           
-          {/* Analytics Section */}
+          {/* Analytics Grid */}
           <div className="grid md:grid-cols-2 gap-6">
             <LiveChart />
             <FraudAnalytics />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <StageDetails />
+            <TransactionTypeBreakdown />
           </div>
           
           {/* Retry Queue */}
@@ -132,34 +140,10 @@ export default function Home() {
           
           {/* Transaction List */}
           <TransactionList />
-          
-          {/* Info Section */}
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <div className="bg-gray-900/50 rounded-xl border border-gray-800 p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">🔍 Fraud Detection</h3>
-              <p className="text-gray-400 text-sm">
-                Each transaction passes through ML-based risk scoring. High-risk transactions (score &gt; 75) 
-                are automatically flagged and moved to the retry queue for manual review.
-              </p>
-            </div>
-            <div className="bg-gray-900/50 rounded-xl border border-gray-800 p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">⚡ Real-time Processing</h3>
-              <p className="text-gray-400 text-sm">
-                Watch transactions flow through each stage with realistic latency. Speed up or slow down 
-                the simulation to observe different scenarios and failure modes.
-              </p>
-            </div>
-            <div className="bg-gray-900/50 rounded-xl border border-gray-800 p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">📊 Audit Trail</h3>
-              <p className="text-gray-400 text-sm">
-                Click any transaction to expand its complete audit trail. See exactly which stage failed, 
-                latency at each step, and detailed error messages.
-              </p>
-            </div>
-          </div>
         </main>
         
         <Footer />
+        <KeyboardShortcuts />
       </div>
     </PipelineProvider>
   );
