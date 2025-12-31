@@ -6,7 +6,9 @@ import {
   TransactionList, 
   MetricsDashboard, 
   ControlPanel,
-  RetryQueue 
+  RetryQueue,
+  LiveChart,
+  FraudAnalytics
 } from '@/components';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
@@ -118,6 +120,12 @@ export default function Home() {
           
           {/* Pipeline Visualization */}
           <PipelineVisualizer />
+          
+          {/* Analytics Section */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <LiveChart />
+            <FraudAnalytics />
+          </div>
           
           {/* Retry Queue */}
           <RetryQueue />
